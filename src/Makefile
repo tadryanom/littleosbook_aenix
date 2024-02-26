@@ -2,8 +2,9 @@ APPS = init sh
 FS_ROOT = fs_root
 BIN_PATH = $(FS_ROOT)/bin
 WARNINGS = -Wall -Wextra -Werror
-CFLAGS = -m32
-CC = gcc
+CFLAGS = -m32 -fno-pic
+#CC = gcc
+CC = gcc-9
 FS_SIZE = 4 # in MB
 
 all: iso

@@ -4,8 +4,9 @@ OBJECTS = loader.o kmain.o fb.o io.o gdt.o gdt_asm.o pic.o idt.o idt_asm.o \
 		  aefs.o process.o page_frame_allocator.o mem.o math.o tss.o \
 		  tss_asm.o syscall.o scheduler.o scheduler_asm.o vfs.o devfs.o \
 		  vnode.o
-CC = gcc
-CFLAGS = -m32 -nostdlib -nostdinc -fno-builtin -fno-stack-protector \
+#CC = gcc
+CC = gcc-9
+CFLAGS = -m32 -fno-pic -nostdlib -nostdinc -fno-builtin -fno-stack-protector \
 		 -nostartfiles -nodefaultlibs -Wall -Wextra -Werror -fomit-frame-pointer \
 		 -Wno-unused-function -c
 LDFLAGS = -T link.ld -melf_i386

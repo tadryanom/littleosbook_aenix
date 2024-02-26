@@ -1,5 +1,6 @@
-CC = gcc
-CFLAGS = -m32 -nostdlib -nostdinc -fno-builtin -fno-stack-protector \
+#CC = gcc
+CC = gcc-9
+CFLAGS = -m32 -fno-pic -nostdlib -nostdinc -fno-builtin -fno-stack-protector \
 		 -nostartfiles -nodefaultlibs -Wall -Wextra -Werror \
 		 -Wno-unused-function -c
 AS = nasm
